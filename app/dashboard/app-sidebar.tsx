@@ -11,6 +11,7 @@ import {
   SidebarMenuItem,
 } from '~/components/ui/sidebar';
 import { Home, Package2, GalleryVerticalEnd } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 const items = [
   {
@@ -20,12 +21,14 @@ const items = [
   },
   {
     title: 'Stock',
-    url: '/dashboard/stock',
+    url: '/dashboard/stocks',
     icon: Package2,
   },
 ];
 
 export function AppSidebar() {
+  const pathname = usePathname();
+
   return (
     <Sidebar>
       <SidebarHeader className="flex flex-row">
@@ -46,7 +49,7 @@ export function AppSidebar() {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton asChild isActive={pathname === item.url}>
                     <a href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>

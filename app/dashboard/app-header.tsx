@@ -1,7 +1,7 @@
 'use client';
 
 import { ProfileMenu } from './app-profile-menu';
-import { ThemeToggle } from '~/components/pattern/theme-toggle';
+import { ThemeToggle } from '~/components/pattern/ThemeToggle';
 import { SidebarTrigger } from '~/components/ui/sidebar';
 
 export const Header = () => (

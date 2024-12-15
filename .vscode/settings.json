@@ -13,7 +13,10 @@
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
     ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-  ]
+  ],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
   // "[typescriptreact]": {
   //   "editor.defaultFormatter": "vscode.typescript-language-features"
   // }
